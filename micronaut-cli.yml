@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.pawga
+testFramework: junit
+sourceLanguage: kotlin
+buildTool: gradle_kotlin
+features: [annotation-api, app-name, assertj, camunda-platform7, gradle, h2, http-client, jackson-databind, jetty-server, junit, kotlin, kotlin-application, kotlin-build, logback, micronaut-build, readme, serialization-jackson, shade, yaml]

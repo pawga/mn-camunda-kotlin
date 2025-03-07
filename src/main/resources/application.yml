@@ -1,0 +1,16 @@
+micronaut:
+  application:
+    name: mnCamundaKotlin
+camunda:
+  admin-user:
+    id: admin
+    password: ZSE$zse4
+  webapps:
+    enabled: true
+  rest:
+    enabled: true
+  generic-properties:
+    properties:
+      initialize-telemetry: true
+  filter:
+    create: All tasks
