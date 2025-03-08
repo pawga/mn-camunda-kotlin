@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.pawga
+package com.pawga.service
 
 import jakarta.inject.Singleton
 import org.camunda.bpm.engine.delegate.DelegateExecution
