@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="dmn_list_documents_1" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.32.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.22.0">
+  <decision id="decision_list_documents_1" name="List documents 1" camunda:historyTimeToLive="1000">
+    <decisionTable id="DecisionTable_1tn1nff" hitPolicy="COLLECT">
+      <input id="Input_1" label="Before the specified Hour">
+        <inputExpression id="InputExpression_1" typeRef="integer">
+          <text>hour</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_01mcnyx" label="After the specified Hour">
+        <inputExpression id="LiteralExpression_1sam7l9" typeRef="integer">
+          <text>hour</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Solution" name="decision" typeRef="string" biodi:width="232">
+        <outputValues id="UnaryTests_0az3veo">
+          <text></text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_02dzbgu" label="Обязательность" name="mandatory" typeRef="boolean" />
+      <rule id="DecisionRule_08cq67w">
+        <inputEntry id="UnaryTests_1uhxal9">
+          <text>&lt;= 11</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t2o5mt">
+          <text>&gt; 0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0y1ggc9">
+          <text>"чай"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jja72w">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1nb8lhd">
+        <inputEntry id="UnaryTests_0hlhxtm">
+          <text>&lt;= 11</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qob7bx">
+          <text>&gt; 0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09mbx9b">
+          <text>"булочка"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1r34vg9">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1j8ixhp">
+        <inputEntry id="UnaryTests_1lc0i77">
+          <text>&lt;= 19</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1moj7im">
+          <text>&gt; 11</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ybk8uf">
+          <text>"суп"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lb1vul">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_187i9by">
+        <inputEntry id="UnaryTests_0ybs0pn">
+          <text>&lt;= 21</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xax9js">
+          <text>&gt; 19</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_06z6kqf">
+          <text>"чай"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v4rl0q">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0cjj0oo">
+        <inputEntry id="UnaryTests_1mjcw0z">
+          <text>&lt;= 23</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q5ynu4">
+          <text>&gt; 21</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01g8b65">
+          <text>"чай"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f78kz2">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="decision_list_documents_1">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

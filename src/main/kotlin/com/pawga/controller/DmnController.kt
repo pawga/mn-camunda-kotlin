@@ -1,4 +1,4 @@
-package ru.zenit.workflow.controller
+package com.pawga.controller
 
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
@@ -41,10 +41,9 @@ class DmnController {
             for (item in decisionResult) {
                 println("Item: $item")
             }
+            return decisionResult.resultList.toString()
         } else {
-            println("Не удалось получить результат!")
+            return("Не удалось получить результат!")
         }
-
-        return "Hello World!"
     }
 }
