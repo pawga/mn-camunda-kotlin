@@ -39,11 +39,11 @@ class DmnController {
             log.info("decisionResult.count ={}", decisionResult.size)
 
             for (item in decisionResult) {
-                println("Item: $item")
+                log.info("Item: $item")
             }
             return decisionResult.resultList.toString()
         } else {
-            return("Не удалось получить результат!")
+            return "Не удалось получить результат!"
         }
     }
 }
