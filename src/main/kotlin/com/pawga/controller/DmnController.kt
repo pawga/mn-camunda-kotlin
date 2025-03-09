@@ -30,12 +30,9 @@ class DmnController {
             .putValue("hour", 11)
         val decisionResult = decisionService.evaluateDecisionByKey("decision_list_documents_1")
             .variables(variables)
-            .evaluate();
+            .evaluate()
 
-        // Извлеките результаты
         if (decisionResult != null && decisionResult.resultList.isNotEmpty()) {
-            // Обработка результатов
-
             log.info("decisionResult.count ={}", decisionResult.size)
 
             for (item in decisionResult) {
