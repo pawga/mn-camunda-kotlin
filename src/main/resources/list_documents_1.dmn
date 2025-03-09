@@ -57,7 +57,35 @@
           <text>"суп"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1lb1vul">
-          <text></text>
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1yegg2z">
+        <inputEntry id="UnaryTests_1hz6749">
+          <text>&lt;= 19</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0afj0is">
+          <text>&gt; 11</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1laud4g">
+          <text>"салат"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07icnj0">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_17h3fte">
+        <inputEntry id="UnaryTests_0j9m3sk">
+          <text>&lt;= 19</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fkbt5j">
+          <text>&gt; 11</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1y3o1s6">
+          <text>"пюре с котлетой"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j34hl3">
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_187i9by">

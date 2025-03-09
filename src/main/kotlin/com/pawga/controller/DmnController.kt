@@ -2,6 +2,7 @@ package com.pawga.controller
 
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
+import io.micronaut.http.annotation.QueryValue
 import org.camunda.bpm.engine.DecisionService
 import org.camunda.bpm.engine.ProcessEngine
 import org.camunda.bpm.engine.ProcessEngines
@@ -17,8 +18,12 @@ class DmnController {
 
     private val log = LoggerFactory.getLogger(this::class.java)
 
+    /**
+     * for example http://localhost:8080/dmn/calculate?hour=14
+     * result: [{decision=суп, mandatory=true}, {decision=салат, mandatory=false}, {decision=пюре с котлетой, mandatory=true}]
+     * */
     @Get("/calculate")
-    fun calculate(): String {
+    fun calculate(@QueryValue hour: Int): String {
 
         // Get the default ProcessEngine
         val processEngine: ProcessEngine = ProcessEngines.getDefaultProcessEngine()
@@ -27,7 +32,7 @@ class DmnController {
 
         // Create variables to pass to the decision
         val variables = Variables.createVariables()
-            .putValue("hour", 11)
+            .putValue("hour", hour)
         val decisionResult = decisionService.evaluateDecisionByKey("decision_list_documents_1")
             .variables(variables)
             .evaluate()
