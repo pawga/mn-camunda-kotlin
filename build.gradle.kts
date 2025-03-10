@@ -17,7 +17,7 @@ repositories {
 dependencies {
     kapt("io.micronaut:micronaut-http-validation")
     kapt("io.micronaut.serde:micronaut-serde-processor")
-    implementation("info.novatec:micronaut-camunda-bpm-feature:2.14.0")
+    implementation("info.novatec:micronaut-camunda-bpm-feature:2.17.0")
     implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut:micronaut-jackson-databind")
     implementation("io.micronaut.kotlin:micronaut-kotlin-runtime")
