@@ -27,11 +27,5 @@ class LoggerDelegate : JavaDelegate {
                     + ", variables=" + execution.getVariables()
                     + " \n\n"
         )
-        val decisionResult = execution.getVariable("decision") as List<*>
-        log.info("decisionResult.count ={}", decisionResult.size)
-
-        for (item in decisionResult) {
-            println("Item: $item")
-        }
     }
 }
